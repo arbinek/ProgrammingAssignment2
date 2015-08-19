@@ -35,7 +35,7 @@ cacheSolve <- function(x, ...) {
                 message("getting cached data")
                 return(m)
         }
-        matrixdata <- x$get     ## Gets the matrix object
+        matrixdata <- x$get()     ## Gets the matrix object
         m <- solve(matrixdata, ...)     ## Calculates the inverse
         x$setinvmatrix(m)       ## Sets the inverse to the matrix object
         m      ## Returns a matrix that is the inverse of 'x'
